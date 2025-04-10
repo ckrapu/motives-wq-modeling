@@ -1,0 +1,15 @@
+pymc
+--find-links https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+numpyro[cuda]
+scipy
+numpy==1.26.4
+arviz
+jupyter
+ipywidgets
+scikit-learn
+xgboost
+patsy
+boto3
+botocore
+dotenv
+geopandas

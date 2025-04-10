@@ -1,0 +1,13 @@
+*.zip
+*.csv
+*.pyc
+*.egg-info
+.env
+.venv/*
+data
+cache
+scratch
+visuals
+
+*.npy
+*.npz
