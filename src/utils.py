@@ -2,15 +2,16 @@ import ee
 import geojson
 import geopandas as gpd
 import json
-import numpy as np
-import pandas as pd
 import requests
 
 CRS_EPSG = 4326
 HUC_LENGTHS = {8, 10, 12}
 NLDI_API_URL = "https://api.water.usgs.gov/nldi/linked-data/huc"
 
-def gdf_to_fc(gdf):
+def gdf_to_fc(gdf: gpd.GeoDataFrame) -> ee.FeatureCollection:
+    '''
+    Turn a geopandas dataframe into an ee.FeatureCollection.
+    '''
     gdf = gdf.to_crs(epsg=CRS_EPSG)
     all_polys = []
     for idx, row in gdf.iterrows():
@@ -26,6 +27,9 @@ def gdf_to_fc(gdf):
     return ee.FeatureCollection(all_polys)
 
 def get_watershed_boundary(huc: str) -> gpd.GeoDataFrame:
+    '''
+    Uses the NLDI API to get the watershed boundary for a given HUC.
+    '''
     assert len(huc) in HUC_LENGTHS
     huc_length = len(huc)
     basin_url = f"{NLDI_API_URL}{huc_length}pp/{huc}/basin"

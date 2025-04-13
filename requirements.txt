@@ -5,7 +5,6 @@ geemap
 geojson
 geopandas
 matplotlib
-mwqm
 numpy
 pandas
 pyarrow

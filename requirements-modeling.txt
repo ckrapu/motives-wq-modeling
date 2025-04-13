@@ -1,12 +1,12 @@
 pymc
 --find-links https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 numpyro[cuda]
-scipy
+scipy==1.15.2
 numpy==1.26.4
 arviz
 jupyter
 ipywidgets
-scikit-learn
+scikit-learn==1.6.1
 xgboost
 patsy
 boto3
