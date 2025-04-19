@@ -1,0 +1,6 @@
+
+#### 4/19/2025
+- Add MCMC diagnostics
+- calculate fraction of nonzero betas
+- determine if embedding effect is sig. nonzero anywhere
+- find sig. coefs with largest effects

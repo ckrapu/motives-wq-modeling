@@ -17,3 +17,5 @@ notes
 *.png
 *.jpg
 *.tif
+*.nc
+*.hdf5
